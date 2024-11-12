@@ -89,7 +89,7 @@ int main() {
         else if (strcmp(argv[0], "cd") == 0) {
             // Handle the 'cd' command
             if (argc > 2) {
-                printf("-rsh: cd: too many arguments\n");
+                fprintf(stderr, "-rsh: cd: too many arguments\n");
             } else if (argc == 2) {
                 // Attempt to change directory
                 if (chdir(argv[1]) != 0) {
